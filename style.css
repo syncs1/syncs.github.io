@@ -1,0 +1,1447 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* animations code */
+section.slider .carousel-caption {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slide-up 1.5s forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-item {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s, transform 1s;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* showroom */
+/* .our-showroom {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 1s, transform 1s;
+  }
+  
+  .our-showroom.show {
+      opacity: 1;
+      transform: translateY(0);
+  } */
+
+/* projects */
+section.our-services .projects-head,
+.grid-item {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s, transform 1s;
+}
+
+section.our-services1 .grid-item {
+    opacity: 1;
+    transform: translateX(0%) !important;
+    /* transition: opacity 1s, transform 1s; */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* navbar section */
+a.navbar-brand img {
+    width: 25%;
+    height: auto;
+}
+
+.slider-with-navbar {
+    position: relative;
+}
+
+button.btn.btn-outline-secondary.d-block {
+    background: none;
+    border: none;
+    filter: invert(1);
+}
+
+.slider-with-navbar .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.social-icons-container {
+    position: fixed;
+    top: 30%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.nav-link.active {
+    color: white !important;
+}
+
+section.slider .slider-with-navbar .nav-link:focus,
+section.slider .nav-link:hover {
+    color: rgb(228, 224, 224);
+}
+
+.navbar-collapse.collapse .nav-item>.nav-link {
+    color: #d6d6d6 !important;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 17px;
+    width: 0;
+    height: 3px;
+    background-color: #30373f;
+    /* Adjust the color as needed */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 60%;
+}
+
+.modal-header {
+    background: #ece8e3;
+}
+
+button.btn.btn-primary {
+    background: #ece8e3;
+    color: black;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 3px;
+}
+
+ul.dropdown-menu.show {
+    background: #ece8e3;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+}
+
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover {
+    color: rgb(0, 0, 0) !important;
+    background-color: #ffffff !important;
+    /* Change this to the desired background color */
+}
+
+/* carousel */
+
+section.slider img.d-block.w-100 {
+    filter: brightness(0.6);
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+section.slider .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.slider .carousel-caption {
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+    left: 10%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    transform: translateY(30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.slider .carousel-caption.d-md-block h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffffff;
+    width: 60%;
+    margin: 0 auto;
+}
+
+section.slider .carousel-caption.d-md-block p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 50px;
+    border-top: 2px solid #e6af5d;
+    margin: 0 -65px;
+}
+
+section.slider .carousel-caption.d-md-block p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 50px;
+    border-top: 2px solid #e6af5d;
+    margin: 0 10px;
+}
+
+section.slider .carousel-caption.d-md-block p {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 2px;
+    color: #e6af5d;
+}
+
+section.slider .d-flex {
+    display: flex !important;
+    justify-content: center;
+}
+
+/* img.d-block.w-100 {
+    filter: brightness(0.5);
+} */
+section.slider .rd-mr.mt-4 a.btn {
+    font-size: .7rem;
+    background: none;
+    /* border: 2px solid #ffffff; */
+    width: 15%;
+    border-radius: 3px;
+    font-family: 'Mulish', sans-serif;
+    /* font-weight: 700; */
+    letter-spacing: 4px;
+    padding: 16px 0;
+    margin: 0 1rem;
+    background: #30373f;
+    color: white;
+    border-radius: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+section.slider .rd-mr.mt-4 a.btn:hover {
+    background: #e6af5d;
+}
+
+/* social icons */
+.social-icons-container {
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icons i {
+    font-size: 22px;
+    background: #f4f0ed;
+    margin-top: 1rem;
+    padding: 8px 10px;
+}
+
+.social-icons a {
+    background: #f4f0ed;
+    margin-top: 1rem;
+    padding: 8px 2px;
+    color: black;
+}
+
+li.nav-item {
+    padding: 0 12px;
+}
+
+/* end */
+
+/*about us section*/
+  section.about {
+            padding: 60px 40px;
+        }
+    
+     
+    
+        section.about .sh-head p.hdd {
+            font-size: 24px;
+            color: #e6af5d;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: .1rem;
+        }
+    
+        .about .sh-head h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    
+       section.about .sh-head p {
+    font-weight: 100;
+    margin-top: 15px;
+    line-height: 2rem;
+}
+    
+     
+        section.about .about-nfo{
+            padding: 60px 40px;
+        }
+    
+        section.about .about-nfo .box h5{
+            margin-top:10px ;
+            text-align: center;
+        }
+    
+        section.about .about-nfo .box p{
+           
+            text-align: center;
+        }
+        section.about .box img{
+            margin-left: 40%;
+            width: 15%;
+        }
+.sh-head .btn {
+    background: #30373f;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    padding: 13px 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.sh-head a:hover {
+    background: #ffc107;
+}
+/* services */
+
+section.our-services {
+    padding: 60px 40px;
+}
+
+section.our-services .services-img {
+    position: relative;
+    overflow: hidden;
+}
+
+section.our-services .overlay {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(48, 55, 63, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.our-services .overlay p {
+    text-align: center;
+}
+
+section.our-services .services-img:hover .overlay {
+    opacity: 1;
+}
+
+section.our-services .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+}
+
+section.our-services h2 {
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+section.our-services h2::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #ffc107;
+    margin: 1rem auto;
+    /* margin-left: 58%; */
+    /* text-align: center; */
+    border-radius: 11px;
+}
+
+section.our-services p {
+    font-weight: 100;
+    color: black;
+    text-align: center;
+}
+
+section.our-services .overlay p {
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+section.our-services .text-right {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+section.our-services .text-right .btn {
+    background: #30373f;
+    color: white;
+    border-radius: 0;
+    padding: 13px 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+section.our-services .text-right .btn:hover {
+    background: #ffc107;
+    /* color: black; */
+}
+
+/* Showroom */
+section.our-showroom {
+    position: relative;
+    padding: 60px 40px;
+    background: url(images/bg.jpeg)no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    z-index: 1;
+    height: 75vh;
+    margin-bottom: 21rem;
+}
+
+section.our-showroom::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #30373f;
+    opacity: .7;
+    z-index: -1;
+}
+
+.stone-selection img {
+    filter: invert(1);
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+section.our-showroom .owl-stage {
+    margin-left: 150px;
+}
+
+section.our-showroom .owl-item img {
+    width: 90% !important;
+    margin-top: 3rem;
+}
+
+section.our-showroom .stone-selection h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+}
+
+section.our-showroom .stone-selection p {
+    font-weight: 100;
+}
+
+section.our-showroom .stone-selection {
+    perspective: 1000px;
+}
+
+section.our-showroom .stone-selection:hover img {
+    transform: rotateY(180deg);
+}
+
+section.our-showroom .stone-selection img {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+section.our-showroom p.line-before {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+section.our-showroom p.line-before::after {
+    content: "";
+    /* position: absolute; */
+    display: block;
+    width: 7%;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 6px 0;
+    /* margin-left: 58%; */
+    /* text-align: center; */
+    border-radius: 11px;
+}
+
+/* end */
+
+/* projects */
+section.projects {
+    padding: 60px 40px 0;
+}
+
+section.projects .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+
+}
+
+section.projects h2 {
+    /* text-align: center; */
+    font-weight: 500;
+    /* text-align: center; */
+    letter-spacing: 1px;
+}
+
+section.projects p {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+section.projects p::after {
+    content: "";
+    /* position: absolute; */
+    display: block;
+    width: 7%;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 6px 0;
+    /* margin-left: 58%; */
+    /* text-align: center; */
+    border-radius: 11px;
+}
+
+section.projects .projects-head {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 8rem;
+}
+
+.project-img {
+    position: relative;
+    overflow: hidden;
+    width: 550px;
+    /* Adjust the width as needed */
+    height: 640px;
+    /* Adjust the height as needed */
+}
+
+.project-img img {
+    transition: transform 0.3s ease;
+    /* padding: 30px; */
+}
+
+.project-img img:hover {
+    transform: scale(1.1);
+}
+
+.project-info p {
+    color: #ffc107;
+    font-weight: 600 !important;
+    font-family: 'Plus Jakarta Sans';
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.project-info h3 {
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    line-height: 42px;
+}
+
+section.projects .text-right {
+    text-align: right;
+}
+
+section.projects .text-right .btn {
+    background: #30373f;
+    color: white;
+    border-radius: 0;
+    padding: 13px 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+section.projects .text-right .btn:hover {
+    background: #ffc107;
+    /* color: black; */
+}
+
+
+section.projects .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.projects .project-image {
+    width: 90%;
+    height: 600px;
+    border: 1px solid #d3d3d3;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+section.projects .child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+section.projects .bg-one {
+    background-image: url(images/kalling-stone-marble.png);
+}
+
+section.projects .bg-two {
+    background-image: url(images/service2a.jpg);
+}
+
+section.projects .bg-three {
+    background-image: url(images/florentine-shower-page.png);
+}
+
+section.projects .bg-four {
+    background-image: url(images/service4.jpg);
+}
+
+
+.project-image:hover .child,
+.project-image:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.project-image:hover .child:before,
+.project-image:focus .child:before {
+    display: block;
+}
+
+.project-image:hover span,
+.project-image:focus span {
+    display: block;
+}
+
+section.projects .project-image.mr-up {
+    margin-top: -6rem;
+}
+
+section.projects .project-info {
+    text-align: left;
+    margin: 1rem 0 1rem 2rem;
+}
+
+@media screen and (max-width: 960px) {
+    section.projects .project-image {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    section.projects .grid-container {
+        padding: 20px;
+    }
+}
+
+/* products */
+section.products {
+    padding: 60px 40px 0;
+    text-align: center;
+}
+
+section.products .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0px;
+}
+
+section.products .grid-item {
+    margin: 0 auto;
+}
+
+.product-info {
+    box-shadow: 0px 0px 6px 2px #c7c7c7;
+    border-radius: 0 0 5px 5px;
+}
+
+.product-info p {
+    padding: 30px 0;
+    font-weight: 600 !important;
+}
+
+section.products h2 {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section.products h2::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #e6af5d;
+    margin: 1rem auto;
+    /* margin-left: 58%; */
+    /* text-align: center; */
+    border-radius: 11px;
+}
+
+section.products p {
+    font-weight: 100;
+}
+
+section.products .column {
+    /* margin: 15px 15px 0; */
+    padding: 0;
+}
+
+section.products .column:last-child {
+    padding-bottom: 60px;
+}
+
+section.products .column::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+section.products .column div {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 330px;
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+section.products .column div {
+    margin-left: 0;
+}
+
+section.products .column div span {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    box-shadow: 0px 0px 6px 2px #c7c7c7;
+    padding: 20px 0;
+    border-radius: 0 0 5px 5px;
+    font-weight: 600
+}
+
+section.products figure {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+section.products figure:hover+span {
+    bottom: -36px;
+    opacity: 1;
+}
+
+section.products .hover05 figure img {
+    margin-left: 30px;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+section.products .hover05 figure:hover img {
+    margin-left: 0;
+}
+
+section.products .text-right {
+    text-align: right;
+}
+
+section.products .text-right .btn {
+    background: #30373f;
+    color: white;
+    border-radius: 0;
+    padding: 13px 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+section.products .text-right .btn:hover {
+    background: #e6af5d;
+}
+
+/* end */
+
+/* testimonials */
+
+section.testimonials {
+    position: relative;
+    padding: 60px 40px;
+    perspective: 1000px;
+}
+
+.d-quotes {
+    position: relative;
+}
+
+.d-quotes img {
+    position: absolute;
+    width: 30px;
+    top: -50px;
+    right: 0;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+section.testimonials:hover .d-quotes img {
+    transform: rotateY(180deg);
+}
+
+section.testimonials .projects-headd p {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+section.testimonials .projects-headd p::after {
+    content: "";
+    display: block;
+    width: 3.5%;
+    height: 2.5px;
+    background-color: #e6af5d;
+    margin: 6px 0;
+    border-radius: 11px;
+}
+
+section.testimonials .carousel-inner {
+    position: relative;
+    width: 60%;
+    height: 35vh;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+section.testimonials .carousel-caption {
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+    left: 10%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: black;
+    text-align: center;
+    transform: translateY(120%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.testimonials .carousel-caption.d-md-block h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5rem;
+    font-weight: 100;
+    letter-spacing: 24px;
+    color: #000000;
+}
+
+section.testimonials .carousel-caption.d-md-block h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 8px;
+    color: #f2ded1;
+}
+
+section.testimonials .carousel-caption.d-md-block p {
+    width: 100%;
+    margin: 0 auto 30px;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+section.testimonials .carousel-indicators button {
+    background-color: black;
+    /* border-radius: 50%; */
+    width: 25px;
+    height: 4px;
+    border: none;
+    margin: 0 4px;
+    display: none;
+}
+
+section.testimonials .carousel-control-prev-icon,
+section.testimonials .carousel-control-next-icon {
+    background-color: rgb(48 55 63);
+}
+
+section.testimonials .carousel-control-next,
+section.testimonials .carousel-control-prev {
+    width: 35%;
+    opacity: 1;
+}
+
+section.testimonials .projects-headd {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+
+}
+
+section.testimonials .carousel-caption.d-md-block h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+}
+
+section.testimonials .carousel-caption.d-md-block h6 {
+    color: #e6af5d;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* footer */
+footer#pq-footer {
+    position: relative;
+    padding: 60px 40px;
+    background: url(images/footerbg1.png)no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 100;
+    color: white;
+}
+
+footer#pq-footer::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+.widget h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.widget p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 100;
+}
+
+.pq-footer-top ul {
+    list-style: none;
+    padding: 0;
+}
+ul.pq-contact i {
+    padding-right: 0.5rem;
+}
+ul.pq-contact li {
+    line-height: 2rem;
+}
+
+.pq-footer-top ul a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 100;
+}
+
+.pq-footer-top ul a:hover {
+    color: #e6af5d;
+}
+
+footer#pq-footer input.form-control {
+    background: transparent;
+    /* color: white; */
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+footer#pq-footer span#basic-addon2 {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+}
+
+footer#pq-footer ::placeholder {
+    color: white !important;
+    font-weight: 100;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+}
+
+footer#pq-footer .form-control:focus {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    outline: 0;
+    box-shadow: none;
+}
+
+span.pq-copyright a {
+    color: #ffcd37;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+/*about us page*/
+    section.about-nfo{
+        padding: 60px 40px;
+    }
+
+    section.about-nfo .box h5{
+        margin-top:10px ;
+        font-size: 2rem;
+    }
+
+    
+    section.about-nfo .box {
+    text-align: center;
+}
+    section.about-nfo .box img{
+        width: 60px;
+        height: auto;
+    }
+    .about-uss-infoo {
+    box-shadow: 0px 0px 7px 2px #c4c4c4;
+    padding: 20px;
+    margin-top: 2rem;
+    border-radius: 7px;
+}
+section.about-nfo .about-uss-infoo li {
+    line-height: 2rem;
+    font-weight: 400;
+}
+section.about-nfo .about-uss-infoo h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+section.about-nfo .about-uss-infoo ul {
+    list-style: circle;
+}
+
+
+/* Projects Page */
+section.main-projects {
+    padding: 60px 40px;
+}
+
+section.main-projects h2 {
+    letter-spacing: 1px;
+
+}
+
+section.main-projects p {
+    font-weight: 100;
+}
+
+/* end */
+section.project-bg {
+
+    position: relative;
+    height: 80vh;
+    background: url(images/project-bg.jpg)no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* end */
+section.recent-projects h2 {
+    text-align: center;
+    margin: 0rem 0 2rem;
+}
+
+section.recent-projects .owl-carousel .owl-item img {
+    display: block;
+    width: 90%;
+}
+
+section.recent-projects p {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: .8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 2px;
+    color: #e6af5d;
+}
+
+section.recent-projects p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 50px;
+    border-top: 2px solid #e6af5d;
+    margin: 0 -64px;
+}
+
+section.recent-projects p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 50px;
+    border-top: 2px solid #e6af5d;
+    margin: 0 10px;
+}
+
+section.recent-projects {
+    padding: 60px 40px;
+    /* text-align: center; */
+}
+
+/*  */
+/* services page */
+section.our-services1 {
+    padding: 60px 40px;
+    position: relative;
+    z-index: 999;
+}
+
+section.our-services1 .services-img {
+    position: relative;
+    overflow: hidden;
+}
+
+section.our-services1 .overlay {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(48, 55, 63, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+section.our-services1 .overlay p {
+    text-align: center;
+}
+
+p.info-serv {
+    font-weight: 100 !important;
+    font-size: 1rem !important;
+}
+
+section.our-services1 .services-img:hover .overlay {
+    opacity: 1;
+}
+
+section.our-services1 .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+}
+
+section.our-services1 h2 {
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+section.our-services1 h2::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #e6af5d;
+    margin: 1rem auto;
+    /* margin-left: 58%; */
+    /* text-align: center; */
+    border-radius: 11px;
+}
+
+section.our-services1 p {
+    font-weight: 100;
+    color: black;
+    text-align: center;
+}
+
+section.our-services1 .overlay p {
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+section.our-services1 .pq-svg {
+    text-align: center;
+}
+
+section.our-services1 .pq-btn-container {
+    cursor: pointer;
+}
+.flowchart-img.mb-4 img {
+    width: 90%;
+    height: auto;
+    /* text-align: center; */
+}
+.flowchart-img.mb-4 {
+    text-align: center;
+}
+/* end */
+
+/* contacts page */
+section.contact-us .pq-map iframe {
+    width: 100%;
+    height: 660px;
+}
+
+section.contact-us .col-md-6.ct-info {
+    /* margin-left: 2rem; */
+    padding: 0 5rem;
+}
+
+section.contact-us {
+    padding: 60px 0 0;
+}
+
+section.contact-us p.hd::after {
+    content: "";
+    display: block;
+    width: 3.5%;
+    height: 2.5px;
+    background-color: #e6af5d;
+    margin: 6px 0;
+    border-radius: 11px;
+}
+
+section.contact-us p.hd {
+    font-weight: 100;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+section.contact-us h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+section.contact-us .contact {
+    display: flex;
+}
+
+section.contact-us .icons {
+    margin-right: 1rem;
+}
+
+section.contact-us .icons i {
+    color: #e6af5d;
+}
+
+section.contact-us h2 {
+    font-size: 2.5rem;
+}
+
+
+input.ct-form {
+    background: #f5f5f5;
+    border: 1px solid var(--grey-color);
+    color: var(--dark-color);
+    width: 100%;
+    float: none;
+    font-size: 16px;
+    padding: 0 15px;
+    height: 54px;
+    line-height: 54px;
+    outline: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    margin-bottom: 30px;
+}
+
+section.contact-form p.pq-section-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+section.contact-us p.mb-0 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+section.contact-us .contact-info h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.22rem;
+}
+
+section.contact-us .contact {
+    margin-top: 2rem;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+.form-control:focus {
+    border-color: #f5f5f5;
+    outline: none;
+    box-shadow: none;
+    background-color: #f5f5f5;
+}
+
+form.pq-contact-form textarea {
+    background: #f5f5f5;
+    border: 1px solid var(--grey-color);
+    color: black;
+    width: 100%;
+    float: none;
+    padding: 10px 15px;
+    outline: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+section.contact-form span.pq-button-text.me-0 {
+    background: #e6af5d;
+    padding: 16px 25px;
+    color: white;
+    /* text-decoration: none !important; */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+}
+
+section.contact-form a.pq-button {
+    text-decoration: none;
+}
+
+section.contact-form span.pq-button-text.me-0:hover {
+    background: #30373f;
+}
+
+section.contact-form.pt-0.pb-xl-0 {
+    padding: 0 0 60px !important;
+}
+/* end */
+
